@@ -1,0 +1,43 @@
+enable
+configure terminal
+hostname Usuarios
+no ip domain-lookup
+spanning-tree mode rapid-pvst 
+enable secret Contraseñassecretas
+line console 0
+password Ezequiel
+login
+exit
+line vty 0 4
+password Ezequiel
+login
+exit
+banner motd #Advertencia, Solo Personal Autorizado#
+service password-encryption
+vlan 10
+name Usuarios
+exit
+
+interface gig0/0
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk nonegotiate
+switchport trunk allow vlan 1,10
+no shutdown
+exit
+
+interface gig0/1
+switchport mode access
+switchport access vlan 10
+switchport port-security
+switchport port-security maximum 2
+switchport port-security violation shutdown
+spanning-tree portfast
+spanning-tree bpduguard enable 
+no shutdown
+exit
+
+
+exit
+copy running-config startup-config
+write
