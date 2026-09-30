@@ -1,0 +1,14 @@
+Fortigate II 
+------------------
+Credenciales
+Usuario: admin
+contraseña: root
+
+Terminal
+---------------------
+config system interface
+edit port1
+set mode static
+set ip 192.8.63.201 255.255.255.0
+set allowaccess https http ping
+end
