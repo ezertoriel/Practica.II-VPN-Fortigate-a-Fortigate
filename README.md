@@ -26,5 +26,4 @@ Aquí encontrara información de los componentes de la topología. Que fueron es
 | Fortigate | fortinet | Fortinet-FGT-7.0.9 |
 | Switch | Cisco vIOS | Switch Viosl2-adventerprisek9-m.ssa.high_iron_20200929 |
 | Linux PC | Docker.io | Pnetlab/linux-desktop:latest |
-| DBServer | Docker.io | Pnetlab/mysql_server:latest |
 | Web Server | Docker.io | Vulnerables/web-dvwa:latest |
